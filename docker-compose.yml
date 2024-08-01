@@ -1,0 +1,13 @@
+services:
+  digitalpals:
+    container_name: digitalpals_service
+    image: ozkanbuyuk/digitalpals:1.0.0
+    ports:
+      - 5000:5000
+    env_file:
+      - .env
+    healthcheck:
+      test: [ "CMD-SHELL", "curl -f http://localhost:5000/ || exit 1" ]
+      interval: 10s
+      timeout: 5s
+      retries: 3

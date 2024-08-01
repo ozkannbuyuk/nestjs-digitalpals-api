@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "f6c686a5-ee2c-438c-87c9-2129cf281764",
+		"name": "DigitalPals",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27800048"
+	},
+	"item": [
+		{
+			"name": "Homepage",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"aaa\",\r\n    \"email\":\"aaa@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000"
+			},
+			"response": []
+		},
+		{
+			"name": "All Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5000/products"
+			},
+			"response": []
+		},
+		{
+			"name": "One Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5000/products/66ab74952e9e1cd3dcd95c1b"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Product Example 3\",\r\n    \"price\": 20.00,\r\n    \"sku\": \"A123456\",\r\n    \"stock\": 10,\r\n    \"isFavorite\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/products"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"isFavorite\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/products/66ab74952e9e1cd3dcd95c1b"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:5000/products/66ab748d2e9e1cd3dcd95c17"
+			},
+			"response": []
+		},
+		{
+			"name": "All Customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5000/customers"
+			},
+			"response": []
+		},
+		{
+			"name": "One Customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5000/customers/66ab74062e9e1cd3dcd95c0b"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Customer Example 3\",\r\n    \"email\": \"customerexample@icloud.com\",\r\n    \"phone\": \"+905555555555\",\r\n    \"address\": \"Türkiye\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/customers"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Customer",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Customer Example 4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/customers/66ab74062e9e1cd3dcd95c0b"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Customer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:5000/customers/66ab74062e9e1cd3dcd95c0b"
+			},
+			"response": []
+		}
+	]
+}

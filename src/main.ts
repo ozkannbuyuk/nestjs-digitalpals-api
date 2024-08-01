@@ -3,6 +3,16 @@ import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+
+  app.enableCors({
+    origin: [
+      'http://localhost:3000',
+      'https://react-digitalpals-admin.vercel.app',
+    ],
+    methods: ['GET', 'PUT', 'POST', 'DELETE', 'PATCH', 'OPTIONS'],
+    allowedHeaders: '*',
+  });
+
   await app.listen(5000);
 }
 bootstrap();
